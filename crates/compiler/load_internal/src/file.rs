@@ -5660,8 +5660,12 @@ fn build_pending_specializations<'a>(
                 // never gets called by Roc code, it will never
                 // get specialized!
                 if is_host_exposed {
-                    let layout_result =
-                        layout_cache.raw_from_var(mono_env.arena, expr_var, mono_env.subs);
+                    let layout_result = layout_cache.raw_from_var(
+                        mono_env.arena,
+                        expr_var,
+                        mono_env.subs,
+                        /* todo(agus) */ None,
+                    );
 
                     // cannot specialize when e.g. main's type contains type variables
                     if let Err(e) = layout_result {
@@ -5740,8 +5744,12 @@ fn build_pending_specializations<'a>(
                 // never gets called by Roc code, it will never
                 // get specialized!
                 if is_host_exposed {
-                    let layout_result =
-                        layout_cache.raw_from_var(mono_env.arena, expr_var, mono_env.subs);
+                    let layout_result = layout_cache.raw_from_var(
+                        mono_env.arena,
+                        expr_var,
+                        mono_env.subs,
+                        /* todo(agus) */ None,
+                    );
 
                     // cannot specialize when e.g. main's type contains type variables
                     if let Err(e) = layout_result {
@@ -5815,8 +5823,12 @@ fn build_pending_specializations<'a>(
                 // never gets called by Roc code, it will never
                 // get specialized!
                 if is_host_exposed {
-                    let layout_result =
-                        layout_cache.raw_from_var(mono_env.arena, expr_var, mono_env.subs);
+                    let layout_result = layout_cache.raw_from_var(
+                        mono_env.arena,
+                        expr_var,
+                        mono_env.subs,
+                        /* todo(agus) */ None,
+                    );
 
                     // cannot specialize when e.g. main's type contains type variables
                     if let Err(e) = layout_result {
@@ -5881,8 +5893,12 @@ fn build_pending_specializations<'a>(
                 // never gets called by Roc code, it will never
                 // get specialized!
                 if is_host_exposed {
-                    let layout_result =
-                        layout_cache.raw_from_var(mono_env.arena, expr_var, mono_env.subs);
+                    let layout_result = layout_cache.raw_from_var(
+                        mono_env.arena,
+                        expr_var,
+                        mono_env.subs,
+                        /* todo(agus) */ None,
+                    );
 
                     // cannot specialize when e.g. main's type contains type variables
                     if let Err(e) = layout_result {
@@ -5953,8 +5969,12 @@ fn build_pending_specializations<'a>(
                 // never gets called by Roc code, it will never
                 // get specialized!
                 if is_host_exposed {
-                    let layout_result =
-                        layout_cache.raw_from_var(mono_env.arena, expr_var, mono_env.subs);
+                    let layout_result = layout_cache.raw_from_var(
+                        mono_env.arena,
+                        expr_var,
+                        mono_env.subs,
+                        /* todo(agus) */ None,
+                    );
 
                     // cannot specialize when e.g. main's type contains type variables
                     if let Err(e) = layout_result {
