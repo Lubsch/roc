@@ -36,12 +36,14 @@ rm roc_nightly.tar.gz
 # simplify dir name
 mv roc_nightly* roc_nightly
 
+alias roc="$(realpath roc_nightly/roc)"
+
 cd basic-cli
 sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' jump-start.sh
 sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' build.roc
-ROC=../roc_nightly/roc ./jump-start.sh
-ls platform
+./jump-start.sh
+
 # build the basic cli platform
-../roc_nightly/roc build.roc --prebuilt-platform -- --roc ../roc_nightly/roc
+roc build.roc --prebuilt-platform
 
 cd ..
