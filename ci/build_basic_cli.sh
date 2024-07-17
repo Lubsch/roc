@@ -38,7 +38,7 @@ mv roc_nightly* roc_nightly
 
 cd basic-cli
 # temp for debugging
-sed -i 's/cp/ls \&\& ls target \&\& ls target\/release \&\& cp/g' jump-start.sh
+sed -i 's/cp/ls target\/x86_64-unknown-linux-musl \&\& cp/g' jump-start.sh
 ROC=../roc_nightly/roc ./jump-start.sh
 
 cd roc_nightly
