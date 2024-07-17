@@ -37,21 +37,13 @@ rm roc_nightly.tar.gz
 mv roc_nightly* roc_nightly
 
 cd basic-cli
-# temp for debugging
-sed -i 's/cp/ls target\/x86_64-unknown-linux-musl \&\& cp/g' jump-start.sh
+sed -i 's|target/release|target/release/x86_64-unknown-linux-musl|g' jump-start.sh
+sed -i 's|target/release|target/release/x86_64-unknown-linux-musl|g' build.roc
 ROC=../roc_nightly/roc ./jump-start.sh
 
 cd roc_nightly
 
 # build the basic cli platform
-./roc build ../basic-cli/examples/countdown.roc --optimize
-
-# We need this extra variable so we can safely check if $2 is empty later
-EXTRA_ARGS=${2:-}
-
-# In some rare cases it's nice to be able to use the legacy linker, so we produce the .o file to be able to do that
-if [ -n "${EXTRA_ARGS}" ];
- then ./roc build $EXTRA_ARGS ../basic-cli/examples/countdown.roc --optimize
-fi
+./roc build.roc --roc ./roc
 
 cd ..
