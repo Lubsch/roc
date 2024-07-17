@@ -36,7 +36,10 @@ rm roc_nightly.tar.gz
 # simplify dir name
 mv roc_nightly* roc_nightly
 
-alias roc="$(realpath roc_nightly/roc)"
+export PATH="$(realpath roc_nightly):$PATH"
+
+# temp test
+roc version
 
 cd basic-cli
 sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' jump-start.sh
