@@ -37,7 +37,7 @@ rm roc_nightly.tar.gz
 mv roc_nightly* roc_nightly
 
 cd basic-cli
-./jump-start.sh ROC=../roc_nightly/roc
+ROC=../roc_nightly/roc ./jump-start.sh
 
 cd roc_nightly
 
