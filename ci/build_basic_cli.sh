@@ -36,7 +36,7 @@ rm roc_nightly.tar.gz
 # simplify dir name
 mv roc_nightly* roc_nightly
 
-export PATH="$(realpath roc_nightly):$PATH"
+export PATH="$(./roc_nightly):$PATH"
 
 # temp test
 roc version
