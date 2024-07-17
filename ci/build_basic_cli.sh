@@ -6,7 +6,6 @@ set -euxo pipefail
 git clone https://github.com/roc-lang/basic-cli.git
 cd basic-cli
 git checkout $RELEASE_TAG
-./jump-start.sh
 cd ..
 
 if [ "$(uname -s)" == "Linux" ]; then
@@ -36,6 +35,9 @@ rm roc_nightly.tar.gz
 
 # simplify dir name
 mv roc_nightly* roc_nightly
+
+cd basic-cli
+./jump-start.sh ROC=../roc_nightly/roc
 
 cd roc_nightly
 
