@@ -40,11 +40,8 @@ cd basic-cli
 sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' jump-start.sh
 sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' build.roc
 ROC=../roc_nightly/roc ./jump-start.sh
-cd ..
-
-cd roc_nightly
 
 # build the basic cli platform
-./roc build.roc --roc ./roc
+./roc build.roc --roc ../roc_nightly/roc
 
 cd ..
