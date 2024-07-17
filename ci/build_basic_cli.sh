@@ -42,6 +42,6 @@ sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' build.roc
 ROC=../roc_nightly/roc ./jump-start.sh
 ls platform
 # build the basic cli platform
-../roc_nightly/roc build.roc --roc ../roc_nightly/roc
+../roc_nightly/roc build.roc --prebuilt-platform -- --roc ../roc_nightly/roc
 
 cd ..
