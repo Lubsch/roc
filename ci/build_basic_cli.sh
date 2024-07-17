@@ -42,8 +42,8 @@ export PATH="$(realpath roc_nightly):$PATH"
 roc version
 
 cd basic-cli
-sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' jump-start.sh
-sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' build.roc
+sed -i.bak 's|target/release|target/x86_64-unknown-linux-musl/release|g' jump-start.sh
+sed -i.bak 's|target/release|target/x86_64-unknown-linux-musl/release|g' build.roc
 ./jump-start.sh
 
 # build the basic cli platform
