@@ -37,8 +37,8 @@ rm roc_nightly.tar.gz
 mv roc_nightly* roc_nightly
 
 cd basic-cli
-sed -i 's|target/release|target/release/x86_64-unknown-linux-musl|g' jump-start.sh
-sed -i 's|target/release|target/release/x86_64-unknown-linux-musl|g' build.roc
+sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' jump-start.sh
+sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' build.roc
 ROC=../roc_nightly/roc ./jump-start.sh
 
 cd roc_nightly
