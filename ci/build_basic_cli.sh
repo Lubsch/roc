@@ -37,6 +37,8 @@ rm roc_nightly.tar.gz
 mv roc_nightly* roc_nightly
 
 cd basic-cli
+# temp for debugging
+sed -i 's/cp/ls \&\& ls target \&\& ls target\/release \&\& cp/g' jump-start.sh
 ROC=../roc_nightly/roc ./jump-start.sh
 
 cd roc_nightly
