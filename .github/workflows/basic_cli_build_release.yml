@@ -258,4 +258,4 @@ jobs:
           cd basic-cli-platform
           # no need to build platform anymore
           sed -i '/build\.roc\|jump-start\.sh/d' ./ci/all_tests.sh
-          ROC=./roc_nightly/roc EXAMPLES_DIR=./examples/ ROC_BUILD_FLAGS=--prebuilt-platform ./ci/all_tests.sh
+          ROC=./roc_nightly/roc EXAMPLES_DIR=./examples/ ./ci/all_tests.sh
