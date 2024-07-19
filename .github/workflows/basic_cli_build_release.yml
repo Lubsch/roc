@@ -250,8 +250,9 @@ jobs:
           git checkout ${{ env.RELEASE_TAG }}
           cp -r examples ../..
           cp -r ci ../..
-          cp -r LICENSE ../..
           # LICENSE is necessary for command test
+          cp -r LICENSE ../..
+          cp -r jump-start.sh ../..
 
       - name: run tests
         run: |
