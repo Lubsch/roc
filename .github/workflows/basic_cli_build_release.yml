@@ -259,5 +259,5 @@ jobs:
           # no need to build platform anymore
           sed -i '/build\.roc\|jump-start\.sh/d' ./ci/all_tests.sh
           # temp for debugging
-          sed -i 's/# exp_internal 1/exp_internal 1/' ./ci/expect_scripts/arg.exp
+          sed -i 's/# exp_internal 1/exp_internal 1/' ./ci/expect_scripts/args.exp
           ROC=./roc_nightly/roc EXAMPLES_DIR=./examples/ ./ci/all_tests.sh
