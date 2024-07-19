@@ -45,8 +45,13 @@ roc version
 
 cd basic-cli
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' jump-start.sh
-    sed -i 's|target/release|target/x86_64-unknown-linux-musl/release|g' build.roc
+    if [[ $(uname -m) == "aarch64" ]]; then
+        target_arch="aarch64-unknown-linux-musl"
+    else
+        target_arch="x86_64-unknown-linux-musl"
+    fi
+    sed -i "s|target/release|target/$target_arch/release|g" jump-start.sh
+    sed -i "s|target/release|target/$target_arch/release|g" build.roc
 fi
 ./jump-start.sh
 
