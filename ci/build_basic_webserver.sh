@@ -40,6 +40,8 @@ rm roc_nightly.tar.gz
 # simplify dir name
 mv roc_nightly* roc_nightly
 
+./roc_nightly/roc version
+
 # add roc to PATH
 cd roc_nightly
 export PATH="$(pwd -P):$PATH"
