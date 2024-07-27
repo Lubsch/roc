@@ -50,8 +50,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     else
         target_arch="x86_64-unknown-linux-musl"
     fi
-    sed -i "s|target/release|target/$target_arch/release|g" jump-start.sh
-    sed -i "s|target/release|target/$target_arch/release|g" build.roc
 fi
 ./jump-start.sh
 
